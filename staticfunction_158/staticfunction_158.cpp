@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 class mahasiswa {
 public:
@@ -8,7 +9,7 @@ public:
 	string nama;
 
 	void setID();
-	void printA11();
+	void printAll();
 	mahasiswa(string pnama) :nama(pnama) { setID(); }
 };
 
@@ -18,26 +19,21 @@ void mahasiswa::setID() {
 	id = ++nim;
 }
 
-void mahasiswa::printA11() {
-	cout << "ID  = " << id << endl;
-	id = ++nim;
-}
-
-void mahasiswa::printA11() {
-	cout << "iD  = " << id << endl;
+void mahasiswa::printAll() {
+	cout << "ID   = " << id << endl;
 	cout << "Nama = " << nama << endl;
 	cout << endl;
 }
 
 int main() {
-	mahasiswa mhs1("Lia Kurnia");
+	mahasiswa mhs1("Lia Kurina");
 	mahasiswa mhs2("Asroni");
 	mahasiswa mhs3("Andi Kurniawan");
 	mahasiswa mhs4("Joko Purbo");
 
-	mhs1.printA11();
-	mhs2.printA11();
-	mhs3.printA11();
-	mhs4.printA11();
-
-return 0;
+	mhs1.printAll();
+	mhs2.printAll();
+	mhs3.printAll();
+	mhs4.printAll();
+	return 0;
+}
