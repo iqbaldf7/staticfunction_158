@@ -33,6 +33,7 @@ void mahasiswa::printAll() {
 	cout << endl;
 }
 
+
 int main() {
 	mahasiswa mhs1("Lia Kurina");
 	mahasiswa mhs2("Asroni");
