@@ -1,33 +1,47 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-class mahasiswa {
+class angka {
 private:
-	static int nim:
+	int* arr;
+	int panjang;
 public:
-	int id;
-	string nama;
-
-	void setTD();
-	void printA11():
-
-static void setNim(int pNim) {nim = pNim; /*Definisi Function*/ }
-static int getNim() { return nim; /*Definisi Function*/ }
-
-mahasiswa(string pnama) : nama(pnama) {setID();
+	angka(int);	//Constructor
+	~angka();	//Destructor
+	void cetakData();
+	void isiData();
 };
-
-int mahasiwa::nim = 0;
-
-void mahasiswa::setID() {
-	id = ++nim;
+//Definisi member funvtion
+angka::angka(int i) {	//Constructor
+	panjang = i;
+	arr = new int[i];
+	isiData();
 }
 
-void mahasiswa::printA11() {
-	cout << "ID = " << id << end1;
-	cout << "Nama =  " << nama << end1;
-	cout << end1;
+angka::~angka() {	//Destructor
+	cout << endl;
+	cetakData();
+	delete[]arr;
+	cout << "Alamat Array sudah Dilepaskan" << endl;
 }
 
+void angka::cetakData() {
+	for (int i = 1; i <= panjang; i++) {
+		cout << i << " = " << arr[1] << endl;
+	}
+}
 
+void angka::isiData() {
+	for (int i = 1; i <= panjang; i++) {
+		cout << i << " = "; cin >> arr[i];
+	}
+	cout << endl;
+}
+
+int main() {
+	angka belajarcpp(3);	//Constructor Dipanggil
+	angka* ptrBelajarcpp = new angka(5);	//Constructor
+	delete ptrBelajarcpp;	//Destructor Dipanggil
+
+	return 0;
+}	//Destructor Dipanggil
